@@ -8,7 +8,7 @@ class USer(BaseModel):
     username:str
     Name:str
     email:str
-    pasword:str
+    password:str
 
 
 
@@ -24,16 +24,16 @@ def search(username: str):
         for m in user_info:
             user_info = m
         
-        datos ={
-            "username":user_info[0],
-            "Name":user_info[1],
-            "email":user_info[2],
-            "pasword":user_info[3]
+       
+        usuario = {
             
-            
-            
-        }
-        return(USer(**datos))
+            "username": user_info[0],
+            "Name": user_info[1],
+            "email": user_info[2],
+            "password": user_info[3]
+                  }
+        return(USer(**usuario))
+
     
     
     except:
